@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
+
+body {
+   background: linear-gradient(to bottom, rgb(4, 11, 34) 0%, rgba(4, 12, 31, 0) 200%);
+   height: 100%;
+   margin: 0;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+
+    .sliding {
+        font-size: 70px;
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .sliding:first-of-type {
+        animation: appear 4s infinite;
+    }
+
+    .sliding:last-of-type {
+        animation: reveal 4s infinite;
+    }
+
+    .sliding:last-of-type span {
+        min-width: 100%;
+        font-size: 5rem;
+        color: #808000;
+        animation: slide 4s linear;
+    }
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 0.3;
+        }
+
+        80% {
+            opacity: 0.7;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            margin-left: -800px;
+        }
+
+        20% {
+            margin-left: -800px;
+        }
+
+        35% {
+            margin-left: 0px;
+        }
+
+        100% {
+            margin-left: 0px;
+        }
+    }
+
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+            width: 0px;
+        }
+
+        20% {
+            opacity: 1;
+            width: 0px;
+        }
+
+        30% {
+            width: 655px;
+        }
+
+        80% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            width: 855px;
+        }
+    }
+
+
+
