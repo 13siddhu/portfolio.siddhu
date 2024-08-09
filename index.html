@@ -62,8 +62,8 @@
            Siddhartha
          </div>
         <div>
-           <span style="color: rgb(249, 0, 204);">I'm a</span>
-           <span style="color: rgb(249, 0, 204);">web developer</span>
+           <span style="color: rgb(249, 0, 204);">I'm a web</span>
+           <span style="color: rgb(249, 0, 204); max-width: 100%;"> developer</span>
         </div>
     </div>
 
@@ -71,36 +71,38 @@
 
            <h1 style="color: rgb(161, 217, 232);" id="learn">Learn more about me</h1>
 
-<section id="about1">
+<!--<section id="about1">-->
 
-    <div class="d-flex">
-      <img src="https://github.com/13siddhu/portfolio.io/blob/3b41899e14d91903b76f789159326edc5f2622cc/images/pp.png?raw=true" class="img-thumbnail" alt="pp.png">
+    <div id="about1">
+      <div class="d-flex">
+        <img src="https://github.com/13siddhu/portfolio.io/blob/3b41899e14d91903b76f789159326edc5f2622cc/images/pp.png?raw=true" class="img-thumbnail" alt="pp.png">
+      </div>
       
        <div>
-         <div class="d-flex">
-            <ul>
-              <li>
+         <div>
+            <ul id="details">
+              <li style="display: block;">
                 <i class="bi bi-chevron-right"></i>
                             <strong>Date of Birth:</strong>
                             <span>13 May 2005</span>
                           </li>
                           
                           
-                          <li>
+                          <li style="display: block;">
                             <i class="bi bi-chevron-right"></i>
                             <strong>Phone:</strong>
                             <span>7007891219</span>
                           </li>
                           
-                          <li>
+                          <li style="display: block;">
                             <i class="bi bi-chevron-right"></i>
                             <strong>City:</strong>
                            <span>Ballia,UP,India</span>
                          </li>
                         </ul>
                       </div>
-                      <div class="d-flex">
-                        <ul>
+                      <div>
+                        <ul id="details1">
                           <li>
                             <i class="bi bi-chevron-right"></i>
                             <strong>Age:</strong>
@@ -119,15 +121,34 @@
                         </ul>
                       </div>
                     <div>
-                      <p>
+                      <p id="para">
                         Highly motivated web developer pursuing a Computer Science degree at <b>VIT Bhopal University</b>.This portfolio showcases my web development skills through projects including some websites. 
                       </p>
                     </div>
         </div>
      </div>  
 </section>
-  <h1>skills</h1>
-<section>
+<h1 id="skill">Skills</h1>
+<section id="skill1">
+    <div>
+      <label for="c++">C++</label>
+      <progress id="file" value="85" max="100">85%</progress>
+    </div>
+    <div>
+      <label for="html">HTML</label>
+      <progress id="html" value="90" max="100">90%</progress>
+    </div>
+    <div>
+      <label for="CSS">CSS</label>
+      <progress id="CSS" value="80" max="100">90%</progress>
+    </div>
+    <div>
+      <label for="js">Javascript</label>
+      <progress id="js" value="80" max="100">80%</progress>
+    </div>
+    <div>
+      <label for="dsa">Data Structures & Algorithm</label>
+      <progress id="dsa" value="50" max="100">50%</progress>
     </div>
 </section>
             <section>
