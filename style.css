@@ -12,14 +12,15 @@ body {
 
 @media screen and (min-width: 601px) {
     #slider{
-      font-size: 80px;
+      font-size: 55px;
     }
+
   }
   
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
   @media screen and (max-width: 432px) {
     #slider{
-      font-size: 40px;
+      font-size: 34px;
     }
   }
 
@@ -28,9 +29,13 @@ body {
 .sliding {
     font-size: 70px;
     display: inline-block;
+    margin: 2vw;
+    margin-top: 135px;
     overflow:hidden;
     white-space: nowrap;
 }
+
+
 .sliding:first-of-type {
     animation: appear 4s infinite;
 }
