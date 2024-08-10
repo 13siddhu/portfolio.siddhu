@@ -11,7 +11,7 @@ const skill = document.getElementById('skill');
 const details = document.getElementById('details');
 const details1 = document.getElementById('details1');
 const para = document.getElementById('para');
-//const img = document.getElementsByClassName('img');
+const img1 = document.getElementById('img1');
 
 learn.style.display = 'none';
 about1.style.display = 'none';
@@ -29,18 +29,9 @@ about.addEventListener('click',()=>{
 
     slider.style.display = 'none';
     learn.style.display = 'inline-table';
-    if (size < 432) {
-       about1.style.display = 'block';
-       details.style.display='compact';
-       details1.style.display = 'compact';
-       para.style.display = 'block';
-       skill.style.display = 'block';
-       skill1.style.display = 'block';
-    }
-    else{
-        about1.style.display = 'inline-block';
-    }
-    details.style.display='compact';
+    about1.style.display = 'inline-flex';
+    img1.style.display = 'block'
+    details.style.display='inline-block';
     details1.style.display = 'compact';
     para.style.display = 'block';
     skill.style.display = 'block';
@@ -56,7 +47,7 @@ skill.style.display='none';
 });
 
 
-/*let isSmallScreen = size <= 431;
+let isSmallScreen = size <= 431;
 
 if (isSmallScreen) {
     about.addEventListener('click',()=>{
@@ -81,8 +72,8 @@ if (isSmallScreen) {
 
 
     // Disable mouseover event for small screens
-    img.style.display = 'block';
+    img1.style.display = 'block';
     about1.style.display = 'block';
     } 
     else {       
-}*/ 
+} 
