@@ -11,24 +11,40 @@ const skill = document.getElementById('skill');
 const details = document.getElementById('details');
 const details1 = document.getElementById('details1');
 const para = document.getElementById('para');
+//const img = document.getElementsByClassName('img');
 
 learn.style.display = 'none';
 about1.style.display = 'none';
 skill1.style.display = 'none';
 skill.style.display = 'none';
-details.style.fontSize = '30px';
-details1.style.fontSize = '30px';
+details.style.fontSize = '22px';
+details1.style.fontSize = '22px';
+para.style.fontSize = '20px';
 details.style.color = 'white';
 details1.style.color = 'white';
 para.style.color = 'white';
 
+
 about.addEventListener('click',()=>{
 
-    skill.style.display = 'flex';
-    learn.style.display = 'flex';
-    about1.style.display = 'flex';
-    skill1.style.display = 'flex';
     slider.style.display = 'none';
+    learn.style.display = 'inline-table';
+    if (size < 432) {
+       about1.style.display = 'block';
+       details.style.display='compact';
+       details1.style.display = 'compact';
+       para.style.display = 'block';
+       skill.style.display = 'block';
+       skill1.style.display = 'block';
+    }
+    else{
+        about1.style.display = 'inline-block';
+    }
+    details.style.display='compact';
+    details1.style.display = 'compact';
+    para.style.display = 'block';
+    skill.style.display = 'block';
+    skill1.style.display = 'block';
 });
 
 home.addEventListener('click',()=>{   
@@ -40,9 +56,33 @@ skill.style.display='none';
 });
 
 
-let isSmallScreen = size <= 768;
+/*let isSmallScreen = size <= 431;
 
 if (isSmallScreen) {
-    style.display = 'block';
+    about.addEventListener('click',()=>{
+
+        slider.style.display = 'none';
+        learn.style.display = 'inline-table';
+        about1.style.display = 'block';
+        details.style.display='block';
+        details1.style.display = 'block';
+        para.style.display = 'block';
+        skill.style.display = 'block';
+        skill1.style.display = 'block';
+    });
+    
+    home.addEventListener('click',()=>{   
+    slider.style.display ='block';
+    about1.style.display = 'none';
+    learn.style.display = 'none';
+    skill1.style.display='none';
+    skill.style.display='none';
+    });
+
+
     // Disable mouseover event for small screens
+    img.style.display = 'block';
+    about1.style.display = 'block';
     } 
+    else {       
+}*/ 
