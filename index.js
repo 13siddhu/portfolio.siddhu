@@ -37,12 +37,12 @@ about.addEventListener('click',()=>{
         about1.style.display = 'block';
     }
     details.style.display='block';
-    details1.style.display = 'compact';
-    para.style.display = 'block';
-    skill.style.display = 'block';
+    details1.style.display = 'block';
+    para.style.display = 'inline-block';
+    skill.style.display = 'run-in';
     skill.style.textAlign='center';
-    skill1.style.display = 'inline-block';
-    skill1.style.fontSize = '22px'
+    skill1.style.display = 'block';
+    skill1.style.fontSize = '22px';
 });
 
 home.addEventListener('click',()=>{   
