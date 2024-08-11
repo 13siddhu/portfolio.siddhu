@@ -1,3 +1,5 @@
+
+
 body {
    background: linear-gradient(to bottom, rgb(4, 11, 34) 0%, rgba(4, 12, 31, 0) 200%);
    height: 100%;
@@ -21,7 +23,6 @@ body {
       font-size: 34px;
     }
   }
-
 
 
 .sliding {
