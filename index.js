@@ -25,17 +25,24 @@ details1.style.color = 'white';
 para.style.color = 'white';
 
 
+
 about.addEventListener('click',()=>{
 
     slider.style.display = 'none';
     learn.style.display = 'inline-table';
-    about1.style.display = 'inline-flex';
-    img1.style.display = 'block'
-    details.style.display='inline-block';
+    img1.style.display = 'flex';
+    about1.style.display = 'flex';
+    if(size<=432){
+        img1.style.display = 'block'; 
+        about1.style.display = 'block';
+    }
+    details.style.display='block';
     details1.style.display = 'compact';
     para.style.display = 'block';
     skill.style.display = 'block';
-    skill1.style.display = 'block';
+    skill.style.textAlign='center';
+    skill1.style.display = 'inline-block';
+    skill1.style.fontSize = '22px'
 });
 
 home.addEventListener('click',()=>{   
@@ -47,33 +54,3 @@ skill.style.display='none';
 });
 
 
-let isSmallScreen = size <= 431;
-
-if (isSmallScreen) {
-    about.addEventListener('click',()=>{
-
-        slider.style.display = 'none';
-        learn.style.display = 'inline-table';
-        about1.style.display = 'block';
-        details.style.display='block';
-        details1.style.display = 'block';
-        para.style.display = 'block';
-        skill.style.display = 'block';
-        skill1.style.display = 'block';
-    });
-    
-    home.addEventListener('click',()=>{   
-    slider.style.display ='block';
-    about1.style.display = 'none';
-    learn.style.display = 'none';
-    skill1.style.display='none';
-    skill.style.display='none';
-    });
-
-
-    // Disable mouseover event for small screens
-    img1.style.display = 'block';
-    about1.style.display = 'block';
-    } 
-    else {       
-} 
