@@ -4,6 +4,7 @@ const size = window.innerWidth;
 const project = document.getElementById('project');
 const blog = document.getElementById('blog');
 const contact = document.getElementById('contact');
+const contact1 = document.getElementById('contact1');
 const learn = document.getElementById('learn');
 const about1 = document.getElementById('about1');
 const skill1 = document.getElementById('skill1')
@@ -12,17 +13,22 @@ const details = document.getElementById('details');
 const details1 = document.getElementById('details1');
 const para = document.getElementById('para');
 const img1 = document.getElementById('img1');
+const social = document.getElementById('social');
+const enquiry = document.getElementById('enquiry');
+
 
 learn.style.display = 'none';
 about1.style.display = 'none';
 skill1.style.display = 'none';
 skill.style.display = 'none';
 details.style.fontSize = '22px';
-details1.style.fontSize = '22px';
-para.style.fontSize = '20px';
+details1.style.fontSize = '18px';
+para.style.fontSize = '16px';
 details.style.color = 'white';
 details1.style.color = 'white';
 para.style.color = 'white';
+contact1.style.display = 'none';
+contact1.style.color = 'white';
 
 
 
@@ -41,8 +47,9 @@ about.addEventListener('click',()=>{
     para.style.display = 'inline-block';
     skill.style.display = 'run-in';
     skill.style.textAlign='center';
-    skill1.style.display = 'block';
+    skill1.style.display = 'flex';
     skill1.style.fontSize = '22px';
+    contact1.style.display = 'none';
 });
 
 home.addEventListener('click',()=>{   
@@ -51,6 +58,22 @@ about1.style.display = 'none';
 learn.style.display = 'none';
 skill1.style.display='none';
 skill.style.display='none';
+contact1.style.display = 'none';
 });
+
+
+contact.addEventListener('click',() => {
+    slider.style.display = 'none';
+    learn.style.display = 'none';
+    about1.style.display='none'
+    contact1.style.display = 'block';
+    skill1.style.display = 'none';
+});
+
+enquiry.addEventListener('click',()=>{
+    alert('This feature will work soon');
+});
+
+
 
 
