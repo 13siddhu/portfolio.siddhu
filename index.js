@@ -15,6 +15,8 @@ const para = document.getElementById('para');
 const img1 = document.getElementById('img1');
 const social = document.getElementById('social');
 const enquiry = document.getElementById('enquiry');
+const contact2 = document.getElementById('contact2');
+const contact3 = document.getElementById('contact3');
 
 
 learn.style.display = 'none';
@@ -50,12 +52,14 @@ about.addEventListener('click',()=>{
     skill1.style.display = 'flex';
     skill1.style.fontSize = '22px';
     contact1.style.display = 'none';
+    social.style.display = 'none';
 });
 
 home.addEventListener('click',()=>{   
 slider.style.display ='block';
-about1.style.display = 'none';
+social.style.display='block';
 learn.style.display = 'none';
+about1.style.display = 'none';
 skill1.style.display='none';
 skill.style.display='none';
 contact1.style.display = 'none';
@@ -66,14 +70,13 @@ contact.addEventListener('click',() => {
     slider.style.display = 'none';
     learn.style.display = 'none';
     about1.style.display='none'
-    contact1.style.display = 'block';
     skill1.style.display = 'none';
+    contact1.style.display = 'block';
+    social.style.display='none';
 });
+
+
 
 enquiry.addEventListener('click',()=>{
     alert('This feature will work soon');
 });
-
-
-
-
