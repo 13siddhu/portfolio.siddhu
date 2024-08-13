@@ -17,6 +17,8 @@ const social = document.getElementById('social');
 const enquiry = document.getElementById('enquiry');
 const contact2 = document.getElementById('contact2');
 const contact3 = document.getElementById('contact3');
+const project1 = document.getElementById('project1');
+
 
 
 learn.style.display = 'none';
@@ -29,6 +31,7 @@ para.style.fontSize = '16px';
 details.style.color = 'white';
 details1.style.color = 'white';
 para.style.color = 'white';
+project1.style.display='none';
 contact1.style.display = 'none';
 contact1.style.color = 'white';
 
@@ -53,6 +56,7 @@ about.addEventListener('click',()=>{
     skill1.style.fontSize = '22px';
     contact1.style.display = 'none';
     social.style.display = 'none';
+    project1.style.display ='none';
 });
 
 home.addEventListener('click',()=>{   
@@ -63,6 +67,19 @@ about1.style.display = 'none';
 skill1.style.display='none';
 skill.style.display='none';
 contact1.style.display = 'none';
+project1.style.display = 'none';
+});
+
+
+project.addEventListener('click',()=>{
+    slider.style.display = 'none';
+    social.style.display = 'none';
+    learn.style.display = 'none';
+    about1.style.display = 'none';
+    skill1.style.display = 'none';
+    skill.style.display = 'none';
+    contact1.style.display = 'none';
+    project1.style.display = 'block';
 });
 
 
@@ -73,6 +90,7 @@ contact.addEventListener('click',() => {
     skill1.style.display = 'none';
     contact1.style.display = 'block';
     social.style.display='none';
+    project1.style.display = 'none';
 });
 
 
