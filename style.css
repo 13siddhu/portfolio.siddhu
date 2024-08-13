@@ -1,3 +1,5 @@
+
+
 body {
    background: linear-gradient(to bottom, rgb(4, 11, 34) 0%, rgba(4, 12, 31, 0) 200%);
    height: 100%;
@@ -6,10 +8,46 @@ body {
    background-attachment: fixed;
 }
 
-#contact3{
-    gap: 30px;
+#contact2{
+    gap: 40vw;
 }
 
+#contact3{
+    padding-top: 5px;
+    gap: 40vw;
+}
+
+#home1{
+    padding: 20px;
+   background-color: #000;
+   color: #fff;
+   opacity: .2;
+}
+
+#home2{
+    padding: 20px;
+    text-align: center;
+   background-color: #000;
+   color: #fff;
+   opacity: .2;
+}
+
+#home3{
+    padding: 20px;
+    text-align: center;
+   background-color: #000;
+   color: #fff;
+   opacity: .2;
+}
+
+
+#home4{
+    padding: 20px;
+    text-align: center;
+   background-color: #000;
+   color: #fff;
+   opacity: .2;
+}
 
 
 @media screen and (min-width: 601px) {
@@ -34,6 +72,19 @@ body {
 
     #contact1{
         display: block;
+    }
+
+    #home1{
+        margin-bottom: 5px;
+    }
+
+    #home3{
+        margin-bottom: 5px;
+    }
+
+    #weather{
+        display: block;
+        max-width: 100%;
     }
   }
 
@@ -108,3 +159,5 @@ body {
         width: 855px;
     }
 }
+
+
