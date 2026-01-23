@@ -9,47 +9,29 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Vercel deployment protection bypass - add bypass token if needed
+// Middleware - Body parsing FIRST
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// CORS Configuration - Allow all origins for Vercel deployment
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  credentials: false
+}));
+
+// Additional CORS headers for extra safety
 app.use((req, res, next) => {
-  // Set CORS headers preemptively
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
   next();
 });
-
-// Middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// CORS Configuration
-const corsOptions = {
-  origin: function (origin, callback) {
-    const allowedOrigins = [
-      'http://localhost:5173',
-      'http://localhost:3000',
-      'http://localhost:5174',
-      'https://siddhartha-five.vercel.app',
-      process.env.FRONTEND_URL,
-      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null,
-    ].filter(Boolean);
-
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST', 'OPTIONS'],
-  credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization']
-};
-
-app.use(cors(corsOptions));
 
 // Routes
 app.use('/api', emailRoutes);
