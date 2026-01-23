@@ -3,6 +3,11 @@ import { sendEmail } from '../controllers/emailController.js';
 
 const router = express.Router();
 
+// Handle OPTIONS preflight requests
+router.options('/send-email', (req, res) => {
+  res.sendStatus(200);
+});
+
 // POST endpoint to send email
 router.post('/send-email', sendEmail);
 
