@@ -36,10 +36,16 @@ export const sendEmail = async (formData) => {
     };
   } catch (error) {
     console.error('Error sending email:', error);
-    console.error('Error response:', error.response);
+    console.error('Error status:', error.response?.status);
+    console.error('Error response data:', error.response?.data);
+    console.error('Full error:', JSON.stringify(error.response?.data, null, 2));
+    
+    const errorMessage = error.response?.data?.message || error.message || 'Failed to send email';
+    console.error('Final error message:', errorMessage);
+    
     return {
       success: false,
-      message: error.response?.data?.message || error.message || 'Failed to send email'
+      message: errorMessage
     };
   }
 };
