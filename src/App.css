@@ -1,4 +1,4 @@
-/* src/App.css - CLEAN VERSION */
+/* App.css */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,20 @@ body {
   background: linear-gradient(135deg, #020617 0%, #1e1b4b 25%, #0f172a 50%, #1a1626 75%, #020617 100%);
   background-attachment: fixed;
   line-height: 1.65;
-  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .app-container {
@@ -19,5 +32,121 @@ body {
   flex-direction: column;
   min-height: 100vh;
   position: relative;
-  width: 100%;
+  z-index: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.28s ease;
+}
+
+a:hover {
+  color: #a78bfa;
+}
+
+/* Button Base Styles */
+button, .btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+/* Primary - vibrant gradient with glow */
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Added for consistency */
+  padding: 12px 24px; /* Added for consistency */
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(99, 102, 241, 0.6),
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:active {
+  transform: translateY(-2px);
+}
+
+/* Secondary - glassmorphism with border */
+.btn-secondary {
+  background: rgba(30, 30, 50, 0.5);
+  border: 1.5px solid rgba(139, 92, 246, 0.4);
+  color: #c4b5fd;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+.btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: #a78bfa;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(139, 92, 246, 0.22);
+}
+
+/* Outline - clean & minimal */
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid rgba(235, 235, 245, 0.24);
+  color: rgba(235, 235, 245, 0.92);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 12px 24px;
+}
+
+.btn-outline:hover {
+  background: rgba(235, 235, 245, 0.08);
+  border-color: #a78bfa;
+  color: #e0d7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.18);
+}
+
+@media (max-width: 768px) {
+  .btn, button {
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
 }
