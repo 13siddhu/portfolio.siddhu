@@ -20,6 +20,7 @@ const corsOptions = {
       'http://localhost:5173',
       'http://localhost:3000',
       'http://localhost:5174',
+      'https://siddhartha-five.vercel.app',
       process.env.FRONTEND_URL,
       process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null,
     ].filter(Boolean);
@@ -31,7 +32,8 @@ const corsOptions = {
     }
   },
   methods: ['GET', 'POST', 'OPTIONS'],
-  credentials: true
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
 };
 
 app.use(cors(corsOptions));
