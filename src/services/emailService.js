@@ -1,15 +1,24 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// Use production URL directly for Vercel deployment
+const PRODUCTION_URL = 'https://portfolio-backend-qfx20536e-siddharthas-projects-288c9c52.vercel.app';
+const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:3001').replace(/\/$/, '');
 
-console.log('Email Service API URL:', API_URL);
+// For production, always use the production URL
+const finalURL = typeof window !== 'undefined' && window.location.hostname === 'siddhartha-five.vercel.app' 
+  ? PRODUCTION_URL 
+  : API_URL;
+
+console.log('Email Service - Environment:', import.meta.env.VITE_API_URL);
+console.log('Email Service - Final API URL:', finalURL);
 
 export const sendEmail = async (formData) => {
   try {
-    console.log('Sending email to:', `${API_URL}/api/send-email`);
+    const endpoint = `${finalURL}/api/send-email`;
+    console.log('Sending email to:', endpoint);
     console.log('Form data:', formData);
     
-    const response = await axios.post(`${API_URL}/api/send-email`, {
+    const response = await axios.post(endpoint, {
       name: formData.name,
       email: formData.email,
       subject: formData.subject,
