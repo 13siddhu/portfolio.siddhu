@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use production URL directly for Vercel deployment
-const PRODUCTION_URL = 'https://portfolio-backend-qfx20536e-siddharthas-projects-288c9c52.vercel.app';
+const PRODUCTION_URL = 'https://portfolio-backend-8rcrrvgg2-siddharthas-projects-288c9c52.vercel.app';
 const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:3001').replace(/\/$/, '');
 
 // For production, always use the production URL
