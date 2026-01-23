@@ -144,30 +144,39 @@
 
 .contact-info h2 {
   font-size: 1.8rem;
-  color: #1f2937;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 0.5rem;
 }
 
 .info-section {
-  background: white;
+  background: rgba(30, 30, 50, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .info-section h3 {
-  color: #3b82f6;
-  margin-bottom: 0.5rem;
+  color: #6366f1;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
 }
 
 .info-section p,
 .info-section a {
-  color: #666;
+  color: #cbd5e1;
   text-decoration: none;
+  line-height: 1.6;
 }
 
 .info-section a:hover {
-  color: #3b82f6;
+  color: #ec4899;
+  transition: color 0.3s ease;
 }
 
 .social-links {
@@ -180,13 +189,14 @@
 }
 
 .social-links a {
-  color: #3b82f6;
+  color: #6366f1;
   font-weight: 500;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 
 .social-links a:hover {
-  opacity: 0.8;
+  color: #ec4899;
+  transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
