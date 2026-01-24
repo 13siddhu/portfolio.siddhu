@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -6,14 +5,21 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import './App.css';
+import Background3D from './components/Background3D'; 
+import ScrollToTop from './components/ScrollToTop'; // <--- 1. Import it
 
 function App() {
   return (
     <Router>
-      <div className="app-container">
+      {/* 2. Add it here, inside the Router */}
+      <ScrollToTop />
+      
+      <Background3D />
+
+      <div className="relative min-h-screen flex flex-col text-white overflow-x-hidden">
         <Header />
-        <main className="main-content">
+        
+        <main className="flex-1 pt-24">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -21,6 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+        
         <Footer />
       </div>
     </Router>
