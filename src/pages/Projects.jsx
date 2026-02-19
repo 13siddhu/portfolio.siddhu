@@ -32,10 +32,10 @@ function Projects() {
     {
       id: 4,
       title: 'SirenX',
-      description: 'is a mission-critical, full-stack coordination platform designed to reduce emergency response times during the "Golden Hour."',
-      technologies: [ Next.js,Node.js, Socket.io, PostgreSQL, PostGIS],
+      description: 'It is a mission-critical, full-stack coordination platform designed to reduce emergency response times during the "Golden Hour."',
+      technologies: ['Next.js', 'Node.js', 'Socket.io', 'PostgreSQL', 'PostGIS'],
       link: 'https://github.com/13siddhu/SirenX',
-      icon: '💼',
+      icon: '🆘',
       gradient: 'from-indigo-500 to-purple-500',
     },
     {
