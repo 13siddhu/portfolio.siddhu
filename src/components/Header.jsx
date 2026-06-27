@@ -26,6 +26,7 @@ function Header() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'Experience', path: '/experience' },
     { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -73,6 +74,20 @@ function Header() {
                 )}
               </Link>
             ))}
+            
+            {/* Desktop Resume Button */}
+            <a 
+              href="/siddhartha_cv.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-2 relative px-5 py-2 rounded-xl font-bold text-white bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.4)] hover:shadow-[0_0_25px_rgba(236,72,153,0.6)] flex items-center gap-2 group overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                <svg className="w-4 h-4 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Resume
+              </span>
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -92,7 +107,7 @@ function Header() {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            mobileMenuOpen ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
+            mobileMenuOpen ? 'max-h-[32rem] opacity-100 mt-6' : 'max-h-0 opacity-0'
           }`}
         >
           <nav className="backdrop-blur-xl bg-slate-800/90 rounded-2xl border border-indigo-500/30 p-4 space-y-2 shadow-2xl shadow-indigo-500/20">
@@ -111,6 +126,20 @@ function Header() {
                 {link.name}
               </Link>
             ))}
+            
+            {/* Mobile Resume Button */}
+            <div className="pt-2">
+              <a
+                href="/siddhartha_cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 transition-all duration-300 shadow-lg shadow-indigo-500/25"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Download Resume
+              </a>
+            </div>
           </nav>
         </div>
       </div>
